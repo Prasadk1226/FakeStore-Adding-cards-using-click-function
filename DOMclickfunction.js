@@ -162,7 +162,7 @@ let arr = [
   },
   {
     id: 17,
-    title: "Women Windbreaker Striped Raincoats",
+    title: "Women Windbreaker Raincoats",
     price: 39.99,
     description:
       "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined.",
@@ -212,6 +212,7 @@ btn.addEventListener("click", () => {
   card.style.height = "500px";
   card.style.width = "300px";
   card.style.borderRadius = "5px";
+  card.style.marginTop = "100px";
   card.style.marginLeft = "3px";
   card.style.backgroundColor = "#B00C4D";
   card.style.border = "2px solid #B00C4D";
@@ -222,12 +223,12 @@ btn.addEventListener("click", () => {
   // -------------------
   let deletebtn = document.createElement("span");
   deletebtn.innerHTML = "X";
-  deletebtn.style.marginLeft = "286px";
+  deletebtn.style.marginLeft = "284px";
   deletebtn.style.color = "white";
   deletebtn.style.backgroundColor = "red";
   deletebtn.style.border = "0px solid black";
-  deletebtn.style.padding = "2px";
-  deletebtn.style.borderRadius = "2px 5px 2px 2px";
+  deletebtn.style.padding = "2px 4px";
+  deletebtn.style.borderRadius = "2px 2px 2px 2px";
   deletebtn.style.cursor = "pointer";
   deletebtn.style.zIndex = "1";
   deletebtn.addEventListener("click", () => {
@@ -251,13 +252,15 @@ btn.addEventListener("click", () => {
   img.style.borderRadius = "20px";
   img.style.boxShadow = "0px 0px 10px white";
   card.appendChild(img);
-  // count++;
+
+
   //  TITLE---------------------------------------
-  let title = document.createElement("h4");
+  let title = document.createElement("h3");
   title.innerHTML = arr[count].title;
   title.style.textAlign = "start";
   card.appendChild(title);
-  // count++;
+
+
   //   DESCRIPTION  -------------------------------
   let descrip = document.createElement("div");
   descrip.innerHTML = `DESCRIPTION: ${arr[count].description}`;
@@ -267,10 +270,11 @@ btn.addEventListener("click", () => {
   descrip.style.padding = "10px";
   descrip.style.borderRadius = "10px";
   card.appendChild(descrip);
-  // count++;
+
+
 
   //  PRICE  --------------------------------------
-  let price = document.createElement("span");
+  let price = document.createElement("p");
   price.innerHTML = `Price: $ ${arr[count].price}`;
   price.style.backgroundColor = "lightgreen";
   price.style.borderRadius = "5px";
