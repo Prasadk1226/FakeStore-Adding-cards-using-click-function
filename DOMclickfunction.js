@@ -205,9 +205,19 @@ let arr = [
 let btn = document.getElementById("btn");
 let container = document.getElementById("container");
 document.body.style.display = "flex";
+
+// ----------------------------------------------------------
+
 let count = 0;
 
 btn.addEventListener("click", () => {
+
+  let divContainer = document.createElement("div")
+divContainer.style.height = "97vh"
+divContainer.style.width = "100vw"
+divContainer.style.backgroundColor = "goldenrod"
+document.body.appendChild(divContainer)
+
   let card = document.createElement("div");
   card.style.height = "500px";
   card.style.width = "300px";
@@ -218,7 +228,7 @@ btn.addEventListener("click", () => {
   card.style.border = "2px solid #B00C4D";
   card.style.zIndex = "-1";
   card.style.padding = "5px";
-  document.body.appendChild(card);
+  divContainer.appendChild(card);
 
   // -------------------
   let deletebtn = document.createElement("span");
